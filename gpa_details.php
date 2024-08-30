@@ -1,6 +1,9 @@
 <?php
+// memanggil gps.phhp
 require_once "gps.php";
+// objek baru gpas1 akan mengases properti yang ada diclass gpa_details
 $gpa_details = new gpa_details();
+// variable bru ini akan menampilkan tampilkanData()
 $datas = $gpa_details->tampilData();
 $i = 1;
 ?>
@@ -27,8 +30,11 @@ $i = 1;
         <?php  foreach($datas as $data) :?>
             <tr>
                 <td><?= $i++?></td>
+                <!-- menampilkan id_gpa -->
                 <td><?= $data['id_gpa']?></td>
+                <!-- menampilkan semester -->
                 <td><?= $data['semester']?></td>
+                <!-- menampilkan semester_gpa -->
                 <td><?= $data['semester_gpa']?></td>
             </tr>
         <?php endforeach ?>

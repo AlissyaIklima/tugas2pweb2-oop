@@ -27,8 +27,11 @@ $i = 1;
         <?php  foreach($datas1 as $data) :?>
             <tr>
                 <td><?= $i++?></td>
+                <!-- menampilkan id_gpa -->
                 <td><?= $data['id_gpa']?></td>
+                <!-- menampilkan semester -->
                 <td><?= $data['semester']?></td>
+                <!-- menampilkan semester_gpa -->
                 <td><?= $data['semester_gpa']?></td>
             </tr>
         <?php endforeach ?>

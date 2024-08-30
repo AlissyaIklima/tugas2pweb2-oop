@@ -1,6 +1,9 @@
 <?php
+// memanggil gps.php
 require_once "gps.php";
+// didalam gps1 akan mengakses baru di class gpas1
 $gpas1 = new gpas1();
+// var data1 akan menghubungkan ke gpas1 yang dimana di gpas1 ada metode tampilData()
 $datas1 = $gpas1->tampilData();
 $i = 1;
 ?>
@@ -15,6 +18,7 @@ $i = 1;
 </head>
 <body>
 <?php
+// memanggil navbar.php
     require_once "navbar.php"
     ?>
 <table class="table table-success table-striped"
@@ -23,6 +27,7 @@ $i = 1;
             <th>id student</th>
             <th>cumulative gpa</th>
         </tr>
+        <!-- mengiterasi setiap elemen dalam array -->
         <?php  foreach($datas1 as $data) :?>
             <tr>
                 <td><?= $i++?></td>

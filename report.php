@@ -1,6 +1,9 @@
 <?php
+// memanggil gps.php
 require_once "gps.php";
+// objek baru gpas1 akan mengases properti yang ada diclass gpa_details
 $report = new reports();
+// variable bru ini akan menampilkan tampilkanData()
 $datas = $report->tampilData();
 $i = 1;
 ?>
@@ -30,10 +33,15 @@ $i = 1;
         <?php  foreach($datas as $data) :?>
             <tr>
                 <td><?= $i++?></td>
+                <!-- menampilkan id_gpas -->
                 <td><?= $data['id_gpas']?></td>
+                <!-- menampilkan report_date -->
                 <td><?= $data['report_date']?></td>
+                <!-- menampilkan status -->
                 <td><?= $data['status']?></td>
+                <!-- menampilkan has_acc_academic_advisor -->
                 <td><?= $data['has_acc_academic_advisor']?></td>
+                <!-- menampilkan has_acc_head_of_program -->
                 <td><?= $data['has_acc_head_of_program']?></td>
                 
 
